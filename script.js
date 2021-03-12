@@ -1,34 +1,16 @@
-alert ("Hello World")
-prompt ("Digite seu nome")
-confirm ("Voce torce pra o cruzerin?")
+/*lista1 */
 
-function verificarAposentadoria(usuario){
-    if (usuario.idade <50){
-        return false;
+
+/*1*/
+function calcularMedia(notas) {
+    let soma=0;
+    for (let i=0; i<5; i++){
+        soma =  soma + notas[i];
     }
-    else {
-       return true;
-    }   
+    let media = soma / notas.length;
+    return media
 }
-
-let usuario = {
-    nome: "Rivaldo",
-    idade: '29',
-    eJogador: false
-};
-
-console.log(usuario)
-
-let usuario2 = {
-    nome: "Joao",
-    idade: "74",
-    eJogador: true
-};
+notas = [0,4,6,12,22];
+console.log (calcularMedia(media));
 
 
-let usuarios = [usuario, usuario2];
-
-console.log(usuarios)
-
-console.log(verificarAposentadoria(usuario));
-console.log(verificarAposentadoria(usuario));
